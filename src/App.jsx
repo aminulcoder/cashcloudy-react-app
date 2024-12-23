@@ -1,17 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import Faq from './components/FAQs/Faq'
+import Feature from './components/Feature/Feature'
+import Footer from './components/Footer/Footer'
+import Heroarea from './components/Herosection/Heroarea'
+import Mission from './components/Mision/Mission'
+import Navbar from './components/Navbar/Navbar'
+import Vission from './components/Vission/Vission'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      
-      <h1>Vite + React</h1>
-   
-    </>
+    <div >
+      <Navbar></Navbar>
+      <Heroarea></Heroarea>
+      <Mission></Mission>
+      <Feature></Feature>
+      <Vission></Vission>
+      <Faq></Faq>
+      <Footer></Footer>
+    </div>
   )
 }
 
