@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -21,12 +22,12 @@ const Navbar = () => {
                     
                     {/* Right Section */}
                     <div className="col-span-6 flex justify-end items-center space-x-6">
-                        <a 
-                            href="#" 
+                        <Link
+                            to={'admin/dashboard'}
                             className="bg-[#6243A8] text-white px-3 py-2 rounded-lg"
                         >
                             Sign in
-                        </a>
+                        </Link>
                         <a 
                             href="#" 
                             className="bg-white text-[#6243A8] border border-[#6243A8] rounded-lg px-3 py-2"

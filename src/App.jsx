@@ -1,4 +1,5 @@
 
+import { Outlet } from 'react-router-dom';
 import './App.css'
 import Faq from './components/FAQs/Faq'
 import Feature from './components/Feature/Feature'
