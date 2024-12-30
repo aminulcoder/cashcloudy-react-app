@@ -16,7 +16,7 @@ const Mission = () => {
         </div>
         <div className="col-span-6">
           <div className="">
-            <img src="/src/assets/Feature/Video.png" alt="" srcset="" />
+            <img src="/src/assets/Feature/Video.png" alt="" />
           </div>
         </div>
       </div>

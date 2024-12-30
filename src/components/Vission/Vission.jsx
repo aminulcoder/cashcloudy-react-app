@@ -12,7 +12,7 @@ const Vission = () => {
 
                 <div className="col-span-6">
                     <div className="">
-                        <img src="/src/assets/Vission/Video (1).png" alt="" srcset="" />
+                        <img src="/src/assets/Vission/Video (1).png" alt="" />
                     </div>
                 </div>
                 <div className="col-span-6 space-y-6 text-start">

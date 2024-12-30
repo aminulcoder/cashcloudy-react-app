@@ -3,13 +3,45 @@
 import { ArrowDownIcon, ChartBarIcon, PlusCircleIcon } from '@heroicons/react/20/solid';
 import AuthenticatedLayout from '../Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
-
+import { StepperContext } from '../contexts/StepperContext.jsx';
 import { ArrowRightIcon, FunnelIcon, MagnifyingGlassIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline';
 import { CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+
 import SearchFilter from '../components/SearchFilter';
 import Stepper from '../components/Stepper/Stepper';
+import StapperControl from '../components/Stepper/StapperControl.jsx';
+import Recipient from '../components/Stepper/steps/Recipient.jsx';
+import Amount from '../components/Stepper/steps/Amount.jsx';
+import Review from '../components/Stepper/steps/Review.jsx';
+import Pay from '../components/Stepper/steps/Pay.jsx';
+import { useState } from 'react';
 export default function Dashboard() {
+
+    const [currentStep, setCurrentStep] = useState(1);
+    const [ userData , setUserData] = useState('');
+    const [ finalData , setFinalData] = useState([]);
+    const steps = ["Recipient", "Amount", "Review", "Pay"];
+    const displayStep = (step) => {
+        switch (step) {
+            case 1:
+                return <Recipient />
+            case 2:
+                return <Amount />
+            case 3:
+                return <Review />
+            case 4:
+                return <Pay />
+            default:
+        }
+    }
+
+    const handleClick = (direction) => {
+        let newStep = currentStep;
+        direction === "next" ? newStep++ : newStep--;
+        newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
+
+    }
     return (
         <AuthenticatedLayout
             header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
@@ -67,28 +99,28 @@ export default function Dashboard() {
 
                                 <div className="flex items-center space-x-2">
                                     <div className="flex items-center space-x-2 border rounded-full px-2 py-1">
-                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" srcset="" />
+                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" />
                                         <p>Phoenix Baker</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2 border rounded-full px-2 py-1">
-                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" srcset="" />
+                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" />
                                         <p>Phoenix Baker</p>
                                     </div>
                                     <div className="flex items-center space-x-2 border rounded-full px-2 py-1">
-                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" srcset="" />
+                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" />
                                         <p>Phoenix Baker</p>
                                     </div>
                                     <div className="flex items-center space-x-2 border rounded-full px-2 py-1">
-                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" srcset="" />
+                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" />
                                         <p>Phoenix Baker</p>
                                     </div>
                                     <div className="flex items-center space-x-2 border rounded-full px-2 py-1">
-                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" srcset="" />
+                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" />
                                         <p>Phoenix Baker</p>
                                     </div>
                                     <div className="flex items-center space-x-2 border rounded-full px-2 py-1">
-                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" srcset="" />
+                                        <img src="/src/assets/users/Avatar.png" className='h-5 w-5' alt="" />
                                         <p>Phoenix Baker</p>
                                     </div>
                                 </div>
@@ -220,17 +252,7 @@ export default function Dashboard() {
                                 <div className="flex items-center flex-1 max-w-sm px-3 border dark:border-gray-700 rounded-md">
                                     <MagnifyingGlassIcon className="w-5 h-5 text-gray-400" />
                                     <input
-                                        onChange={(e) => {
-                                            return router.get(route(routeName, params),
-                                                {
-                                                    search: e.target.value
-                                                },
-                                                {
-                                                    preserveState: true,
-                                                    replace: true
-                                                }
-                                            )
-                                        }}
+
                                         type="text" name="search" className="py-2 block w-full dark:bg-transparent border-gray-200 dark:border-gray-700 rounded-lg text-sm border-none focus:ring-0" placeholder="Search" />
                                 </div>
 
@@ -348,9 +370,7 @@ export default function Dashboard() {
                             </div>
                         </div>
 
-                        <div className="bg-gray-900 flex flex-col gap-10 h-screen items-center justify-center">
-      <Stepper />
-    </div>
+                        
                     </div>
                 </div>
             </div>
@@ -384,7 +404,7 @@ export default function Dashboard() {
                                                     )
                                                 }}
                                                 type="text" name="search" className="py-2 block w-full dark:bg-transparent  bg-[#9E77ED] dark:border-gray-700 rounded-lg text-sm border-none focus:ring-0 text-white" placeholder="Search" />
-                                                <button className='border px-2 rounded-md text-white'>Copy</button>
+                                            <button className='border px-2 rounded-md text-white'>Copy</button>
                                         </div>
 
 
@@ -393,7 +413,7 @@ export default function Dashboard() {
                                 </div>
                             </div>
                             <div className="flex items-center space-x-3">
-                                <img src="/src/assets/tri/tryingle icon.png" alt="" srcset="" />
+                                <img src="/src/assets/tri/tryingle icon.png" alt="" />
                             </div>
 
 
@@ -401,6 +421,43 @@ export default function Dashboard() {
                     </div>
                 </div>
             </div>
+
+
+            <div className="">
+                <div className="sm:px-6 ">
+                    <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div className="w-1/2 mx-auto  rounded-2xl pb-2 bg-white">
+                            <div className=" container  horizontal mt-5">
+
+                                <Stepper 
+                                steps={steps}
+                                currentStep={currentStep}
+                                />
+                            </div>
+
+                            {/* Display components */}
+
+                            <div className='my-10 p-10'>
+                                <StepperContext.Provider value={{
+                                    userData,
+                                    setUserData,
+                                    finalData,
+                                    setFinalData
+
+                                }}>
+                                    {displayStep(currentStep)}
+                                </StepperContext.Provider>
+                            </div>
+                            <StapperControl
+                                handleClick={handleClick}
+                                steps={steps}
+                                currentStep={currentStep}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </AuthenticatedLayout>
     );
 }
