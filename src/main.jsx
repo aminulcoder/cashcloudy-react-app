@@ -11,23 +11,16 @@ import Dashboard from './Pages/Dashboard.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<App></App>,
-    children:[
-   
-      // {
-      //   path: '/admin/dashboard',
-      //   element:<Dashboard/>
-      // }
-    ]
+    element: <App></App>,
+
   },
   {
     path: "/admin/dashboard",
-    // element: <AuthenticatedLayout></AuthenticatedLayout>,
     element: <Dashboard></Dashboard>
-      },
+  },
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider  router={router}></RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
   </StrictMode>,
 )

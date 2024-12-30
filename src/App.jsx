@@ -1,5 +1,5 @@
 
-import { Outlet } from 'react-router-dom';
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Faq from './components/FAQs/Faq'
 import Feature from './components/Feature/Feature'
@@ -12,6 +12,7 @@ import Vission from './components/Vission/Vission'
 function App() {
   return (
     <div >
+
       <Navbar></Navbar>
       <Heroarea></Heroarea>
       <Mission></Mission>
@@ -19,8 +20,14 @@ function App() {
       <Vission></Vission>
       <Faq></Faq>
       <Footer></Footer>
+
+
     </div>
   )
 }
 
 export default App
+
+
+
+
