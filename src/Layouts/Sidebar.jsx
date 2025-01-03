@@ -13,7 +13,9 @@ import {
     TransitionChild,
 } from '@headlessui/react'
 import {
+    ArrowDownCircleIcon,
     ArrowsRightLeftIcon,
+    BanknotesIcon,
     Bars3Icon,
     BellIcon,
     BoltIcon,
@@ -30,6 +32,7 @@ import {
     FolderIcon,
     GiftIcon,
     HomeIcon,
+    HomeModernIcon,
     QuestionMarkCircleIcon,
     StarIcon,
     UserGroupIcon,
@@ -37,8 +40,8 @@ import {
     WrenchIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
 
-import { Link } from '@inertiajs/react'
 
 
 
@@ -47,38 +50,6 @@ function classNames(...classes) {
 }
 
 
-const navigation = [
-    { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-    { name: 'Transactions', href: '#', icon: ArrowsRightLeftIcon, current: false },
-    { name: 'Earn $20', href: "#", icon: GiftIcon, current: false },
-
-    // {
-    //     name: 'Admin',
-    //     icon: UserGroupIcon,
-    //     current: false,
-    //     children: [
-    //         { name: 'Admin', href: '#' },
-    //         { name: 'Role', href:'#' }
-    //     ],
-    // },
-    // {
-    //     name: 'Dropdown',
-    //     icon: UserGroupIcon,
-    //     current: false,
-    //     children: [
-    //         { name: 'One', href: '#' },
-    //         { name: 'Two', href: '#' },
-    //         { name: 'Three', href: '#' },
-    //     ],
-    // },
-
-];
-
-const teams = [
-    { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
-    { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-    { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
-];
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     return (
@@ -115,28 +86,22 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                 <ul role="list" className="flex flex-1 flex-col gap-y-7">
                                     <li>
                                         <ul role="list" className="-mx-2 space-y-1">
-                                            {navigation.map((item) => (
-                                                <li key={item.name}>
+                                                <li >
                                                     <a
-                                                        href={item.href}
-                                                        className={classNames(
-                                                            item.current
-                                                                ? 'bg-gray-50 text-indigo-600'
-                                                                : 'text-gray-800 dark:text-gray-400 hover:bg-gray-50 hover:text-indigo-600',
+                                                        href="#"
+                                                        className={classNames( 'text-gray-800 dark:text-gray-400 hover:bg-gray-50 hover:text-indigo-600',
                                                             'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
                                                         )}
                                                     >
-                                                        <item.icon
+                                                        <HomeModernIcon
                                                             aria-hidden="true"
-                                                            className={classNames(
-                                                                item.current ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600',
+                                                            className={classNames('text-gray-400 group-hover:text-indigo-600',
                                                                 'h-6 w-6 shrink-0',
                                                             )}
                                                         />
-                                                        {item.name}
+                                                        Dashboard
                                                     </a>
                                                 </li>
-                                            ))}
                                         </ul>
                                     </li>
                                     <li className="mt-auto">
@@ -162,40 +127,62 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col dark:bg-gray-800">
                 {/* Sidebar component, swap this element with another sidebar if you like */}
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r dark:border-gray-700 border-gray-200 px-6 pb-4">
-                    <div className="flex h-16 shrink-0 items-center">
+                    <Link to="/admin/dashboard" className="flex h-16 shrink-0 items-center">
                         <img
                             alt="Your Company"
                             src="/src/assets/navbar/Clip path group.png"
                             className="h-10 w-auto"
                         />
                         <span className="px-2 font-extrabold text-lg">Cashcloudy</span>
-                    </div>
+                    </Link>
                     <nav className="flex flex-1 flex-col">
                         <ul role="list" className="flex flex-1 flex-col gap-y-7">
                             <li>
                                 <ul role="list" className="-mx-2 space-y-1">
-                                    {navigation.map((item) => (
-                                        <li key={item.name}>
-                                            <a
-                                                href={item.href}
-                                                className={classNames(
-                                                    item.current
-                                                        ? 'bg-gray-50 text-indigo-600'
-                                                        : 'text-gray-800 dark:text-gray-400 hover:bg-gray-50 hover:text-indigo-600',
+                                        <li>
+                                            <Link
+                                                to="/admin/dashboard"
+                                                className={classNames( 'text-gray-800 dark:text-gray-400 hover:bg-gray-50 hover:text-indigo-600',
                                                     'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
                                                 )}
                                             >
-                                                <item.icon
+                                                <HomeModernIcon
                                                     aria-hidden="true"
-                                                    className={classNames(
-                                                        item.current ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600',
+                                                    className={classNames('text-gray-400 group-hover:text-indigo-600',
                                                         'h-6 w-6 shrink-0',
                                                     )}
                                                 />
-                                                {item.name}
-                                            </a>
+                                                Dashboard
+                                            </Link>
+                                            <Link
+                                                to="/admin/transction"
+                                                className={classNames( 'text-gray-800 dark:text-gray-400 hover:bg-gray-50 hover:text-indigo-600',
+                                                    'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
+                                                )}
+                                            >
+                                                <ArrowsRightLeftIcon
+                                                    aria-hidden="true"
+                                                    className={classNames('text-gray-400 group-hover:text-indigo-600',
+                                                        'h-6 w-6 shrink-0',
+                                                    )}
+                                                />
+                                                Transction
+                                            </Link>
+                                            <Link
+                                                to="/admin/earn-20$"
+                                                className={classNames( 'text-gray-800 dark:text-gray-400 hover:bg-gray-50 hover:text-indigo-600',
+                                                    'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
+                                                )}
+                                            >
+                                                <GiftIcon
+                                                    aria-hidden="true"
+                                                    className={classNames('text-gray-400 group-hover:text-indigo-600',
+                                                        'h-6 w-6 shrink-0',
+                                                    )}
+                                                />
+                                                Earn 20$
+                                            </Link>
                                         </li>
-                                    ))}
                                 </ul>
                             </li>
 

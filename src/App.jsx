@@ -8,21 +8,17 @@ import Heroarea from './components/Herosection/Heroarea'
 import Mission from './components/Mision/Mission'
 import Navbar from './components/Navbar/Navbar'
 import Vission from './components/Vission/Vission'
-
+import AppLayout from './Layouts/AppLayout'
 function App() {
-  return (
-    <div >
 
-      <Navbar></Navbar>
-      <Heroarea></Heroarea>
+
+  return (
+    <AppLayout >
       <Mission></Mission>
       <Feature></Feature>
       <Vission></Vission>
       <Faq></Faq>
-      <Footer></Footer>
-
-
-    </div>
+    </AppLayout>
   )
 }
 

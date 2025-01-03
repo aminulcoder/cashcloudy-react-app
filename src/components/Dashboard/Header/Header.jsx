@@ -27,7 +27,6 @@ import {
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 import Switcher from '@/Components/Switcher';
-import { Link } from '@inertiajs/react';
 
 const userNavigation = [
     { name: 'Your profile', href: '#' },

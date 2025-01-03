@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
-import { router } from '@inertiajs/react';
+
 import React from 'react'
 
 function SearchFilter({routeName}) {

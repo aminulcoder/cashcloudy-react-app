@@ -23,17 +23,17 @@ const Navbar = () => {
                     {/* Right Section */}
                     <div className="col-span-6 flex justify-end items-center space-x-6">
                         <Link
-                            to={'admin/dashboard'}
+                            to={'/login'}
                             className="bg-[#6243A8] text-white px-3 py-2 rounded-lg"
                         >
                             Sign in
                         </Link>
-                        <a 
-                            href="#" 
+                        <Link
+                            to={'/register'} 
                             className="bg-white text-[#6243A8] border border-[#6243A8] rounded-lg px-3 py-2"
                         >
                             Sign up
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

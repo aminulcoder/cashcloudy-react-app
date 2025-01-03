@@ -1,14 +1,14 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import { Link } from '@inertiajs/react';
-import Header from './Header';
-import Footer from './Footer';
-import Navbar from '@/Components/Dashboard/Navbar';
+import Footer from "../components/Footer/Footer";
+import Heroarea from "../components/Herosection/Heroarea";
+import Navbar from "../components/Navbar/Navbar";
+
 
 export default function AppLayout({ children }) {
     return (
         <div className="dark:bg-slate-800">
             <Navbar />
-            <div className="container mx-auto">
+            <Heroarea></Heroarea>
+            <div className=" container mx-auto">
                 {children}
             </div>
             <Footer />
