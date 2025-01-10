@@ -5,14 +5,14 @@ const Pay = () => {
   return (
     <div>
       <div className="inline-flex justify-center bg-gray-200 rounded-full ">
-          <CheckIcon className='h-16 w-16 p-4 font-bold text-violet-700'/>
+          <CheckIcon className='h-20 w-20 p-5 font-extrabold text-violet-700'/>
       </div>
       <div className="py-6">
         <h1 className=' text-4xl font-semibold'>Congratulations your payment is successfully send</h1>
       </div>
 
       <div className="bg-violet-600 rounded-lg">
-        <button className=' bg-violet-600 text-white py-2'>Confirm and send</button>
+        <button className=' bg-violet-600  font-semibold text-white py-2'>Back to home</button>
       </div>
     </div>
   )

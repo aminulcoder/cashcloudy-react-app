@@ -5,7 +5,7 @@ const Recipient = () => {
   return (
     <div>
 
-      <h2 className='text-center text-gray-950 font-semibold text-3xl '>Send your money</h2>
+      <h2 className='text-center text-gray-950 font-semibold text-3xl '></h2>
       <div className="flex items-center justify-center  py-3">
         <div className="flex items-center  flex-1 max-w-sm px-3 border  rounded-md">
           <MagnifyingGlassIcon className="w-5 h-5 text-gray-400" />

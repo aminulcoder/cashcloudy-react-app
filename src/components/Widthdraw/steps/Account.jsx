@@ -5,20 +5,20 @@ const Account = () => {
   return (
     <div>
       <h2 className='text-center text-gray-950 font-semibold text-3xl '>Send your money</h2>
-      <div className="flex items-center justify-center  py-3">
-        <div className="flex items-center  flex-1 max-w-sm px-3 border  rounded-md">
+      <div className="flex items-center justify-center  py-6">
+        <div className="flex items-center  flex-1 max-w-2xl px-3 py-1 border  rounded-md">
           <MagnifyingGlassIcon className="w-5 h-5 text-gray-400" />
           <input
             type="text" name="search" className="py-2 block w-full px-3 dark:bg-transparent   dark:border-gray-700 rounded-lg text-sm border-none focus:ring-0 text-white" placeholder="Name, @username, email, phone" />
         </div>
       </div>
 
-      <div className='flex justify-between items-center bg-gray-200 py-2 px-3 rounded-lg'>
+      <div className='flex justify-between items-center bg-gray-200 py-3 px-3 rounded-lg'>
         <div className="flex items-center space-x-2">
-          <BuildingLibraryIcon className='h-8 w-8' />
-          <p className='font-semibold'>Add new bank account</p>
+          <BuildingLibraryIcon className='h-6 w-6' />
+          <p className='text-base font-medium'>Add new bank account</p>
         </div>
-        <ChevronRightIcon className="h-6 w-6 " />
+        <ChevronRightIcon className="h-5 w-5 font-bold " />
       </div>
       <div className="w-full py-3">
         {/* Title */}
@@ -36,8 +36,8 @@ const Account = () => {
             <img src="/src/assets/widthdraw/_Nav item button (1).png" alt="" srcset="" />
           </div>
           <div className="text-start px-3">
-            <h4 className="text-2xl font-semibold">Bank Name</h4>
-            <p>BDT account ending in 8001</p>
+            <h4 className="text-2xl text-[#0C111D] font-semibold">Bank Name</h4>
+            <p className='text-[#667085]'>BDT account ending in 8001</p>
           </div>
         </div>
         <ChevronRightIcon className="h-6 w-6 " />
@@ -48,8 +48,8 @@ const Account = () => {
             <img src="/src/assets/widthdraw/_Nav item button (1).png" alt="" srcset="" />
           </div>
           <div className="text-start px-3">
-            <h4 className="text-2xl font-semibold">Bank Name</h4>
-            <p>BDT account ending in 8001</p>
+            <h4 className="text-2xl text-[#0C111D] font-semibold">Bank Name</h4>
+            <p className='text-[#667085]'>BDT account ending in 8001</p>
           </div>
         </div>
         <ChevronRightIcon className="h-6 w-6 " />
@@ -60,8 +60,8 @@ const Account = () => {
             <img src="/src/assets/widthdraw/_Nav item button (1).png" alt="" srcset="" />
           </div>
           <div className="text-start px-3">
-            <h4 className="text-2xl font-semibold">Bank Name</h4>
-            <p>BDT account ending in 8001</p>
+            <h4 className="text-2xl text-[#0C111D] font-semibold">Bank Name</h4>
+            <p className='text-[#667085]'>BDT account ending in 8001</p>
           </div>
         </div>
         <ChevronRightIcon className="h-6 w-6 " />
@@ -72,8 +72,8 @@ const Account = () => {
             <img src="/src/assets/widthdraw/_Nav item button (1).png" alt="" srcset="" />
           </div>
           <div className="text-start px-3">
-            <h4 className="text-2xl font-semibold">Bank Name</h4>
-            <p>BDT account ending in 8001</p>
+            <h4 className="text-2xl text-[#0C111D] font-semibold">Bank Name</h4>
+            <p className='text-[#667085]'>BDT account ending in 8001</p>
           </div>
         </div>
         <ChevronRightIcon className="h-6 w-6 " />

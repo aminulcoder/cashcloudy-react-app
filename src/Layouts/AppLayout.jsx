@@ -5,10 +5,10 @@ import Navbar from "../components/Navbar/Navbar";
 
 export default function AppLayout({ children }) {
     return (
-        <div className="dark:bg-slate-800">
+        <div className="">
             <Navbar />
             <Heroarea></Heroarea>
-            <div className=" container mx-auto">
+            <div className="2xl:max-w-[1536px] mx-auto">
                 {children}
             </div>
             <Footer />

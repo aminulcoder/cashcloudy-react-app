@@ -4,9 +4,9 @@ import React from 'react'
 const Recipient = () => {
   return (
     <div>
-      <h2 className='text-center text-gray-950 font-semibold text-3xl '>Enter your new bank details</h2>
+      <h2 className='text-center text-gray-950 font-semibold text-3xl py-6 '>Enter your new bank details</h2>
 
-      <div className="sm:col-span-3">
+      <div className="sm:col-span-3 py-1">
         <label htmlFor="country" className="text-start block text-sm/6 font-medium text-gray-900">
           Select Country
         </label>
@@ -29,7 +29,7 @@ const Recipient = () => {
         </div>
       </div>
 
-      <div className="sm:col-span-4 ">
+      <div className="sm:col-span-4 py-1">
         <label htmlFor="username" className=" text-start block text-sm/6 font-medium text-gray-900">
           Full name of the account holder
         </label>
@@ -47,7 +47,7 @@ const Recipient = () => {
         </div>
       </div>
 
-      <div className="sm:col-span-4 ">
+      <div className="sm:col-span-4 py-1">
         <label htmlFor="username" className=" text-start block text-sm/6 font-medium text-gray-900">
         Bank name
         </label>
@@ -64,7 +64,7 @@ const Recipient = () => {
           </div>
         </div>
       </div>
-      <div className="sm:col-span-4 ">
+      <div className="sm:col-span-4 py-1">
         <label htmlFor="username" className=" text-start block text-sm/6 font-medium text-gray-900">
         Branch name
         </label>
@@ -81,7 +81,7 @@ const Recipient = () => {
           </div>
         </div>
       </div>
-      <div className="sm:col-span-4 ">
+      <div className="sm:col-span-4 py-1">
         <label htmlFor="username" className=" text-start block text-sm/6 font-medium text-gray-900">
         Account number
         </label>
@@ -99,7 +99,7 @@ const Recipient = () => {
         </div>
       </div>
       <div className="bg-violet-600 rounded-lg my-3">
-        <button className=' bg-violet-600 text-white py-2'>Confirm</button>
+        <button className='text-base font-semibold bg-violet-600 text-white py-1'>Confirm</button>
       </div>
     </div>
   )

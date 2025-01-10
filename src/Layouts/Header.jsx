@@ -142,7 +142,7 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
                   className="flex w-full items-center gap-x-3.5 py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                 >
                   <UserCircleIcon className="w-5" />
-                  {auth.currentUser.firstname}
+                  {/* {auth.currentUser.firstname} */}
                 </Link>
               </MenuItem>
               <MenuItem>

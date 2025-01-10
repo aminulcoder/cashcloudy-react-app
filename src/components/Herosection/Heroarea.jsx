@@ -1,59 +1,69 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Heroarea = () => {
-    return (
+const HeroArea = () => {
+  return (
+    <section className="bg-[#6941C6] sm:min-h-screen flex flex-col items-center py-16 px-6 sm:px-8 md:px-12 lg:px-24 xl:px-48 relative">
+      <div className="relative z-50">
+        {/* Hero Heading */}
+        <h1 className="text-white font-bold text-center leading-tight text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-8xl">
+          Easy way to send <br /> & receive online <br /> payments
+        </h1>
 
-        <section className='bg-red-500' >
+        {/* Get Started Button */}
+        <div className="mt-12">
+          <Link
+            to="/register"
+            className="bg-white text-[#6941C6] font-semibold py-3 px-3 sm:px-8 rounded-lg shadow-md hover:bg-gray-100 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+          >
+            Get Started
+          </Link>
+        </div>
+      </div>
+      <div className="hidden sm:block">
+        {/* Background Flags */}
+        <div className="absolute inset-0 w-full h-full flex items-end justify-between z-20">
+          {/* Left Background Flag (USA) */}
+          <div
+            className="h-[400px] w-[400px] bg-cover bg-no-repeat bg-center opacity-50"
+            style={{
+              backgroundImage: "url('/src/assets/Heroarea/usa-flag.png')",
+            }}
+          ></div>
 
-            <div className="bg-[#6941C6] h-[100vh]  px-64">
-                {/* Hero Heading */}
-                <h1 className="text-7xl text-white  font-bold px-28 ">
-                    Easy way to send <br /> & receive online <br /> payments
-                </h1>
+          {/* Right Background Flag (Bangladesh) */}
+          <div
+            className="h-[400px] w-[400px] bg-cover left-0 bg-no-repeat bg-center opacity-40"
+            style={{
+              backgroundImage:
+                "url('/src/assets/Heroarea/bangladesh-flag.png')",
+            }}
+          ></div>
+        </div>
 
-                {/* Get Started Button */}
-                <button
-                    type="button"
-                    className="border rounded-lg bg-white py-2 px-6 mt-12  text-[#6941C6] font-semibold"
-                >
-                    Get Started
-                </button>
+        {/* Foreground Images */}
+        <div className="absolute z-30 inset-0 w-full h-full flex items-end justify-between px-6 sm:px-12 lg:px-24 xl:px-48 ">
+          {/* Left Foreground Image (USA Man) */}
+          <div className="relative w-1/2 flex justify-start">
+            <img
+              src="/src/assets/Heroarea/medium-shot-man-posing-studio 1.png"
+              alt="Businessman representing USA"
+              className="w-[300px] md:w-[350px] lg:w-[400px] object-contain"
+            />
+          </div>
 
-
-
-                {/* Flag Sections */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 ">
-                    {/* USA Section */}
-                    <div
-                        className="relative h-[400px] bg-cover bg-center rounded-lg overflow-hidden"
-                        style={{
-                            backgroundImage: "url('/src/assets/Heroarea/usa-flag.png')",
-                        }}
-                    >
-                        <img
-                            src="/src/assets/Heroarea/medium-shot-man-posing-studio 1.png"
-                            alt="Man posing"
-                            className="absolute bottom-0 left-0 z-50 h-[400px] w-1/2"
-                        />
-                    </div>
-
-                    {/* Bangladesh Section */}
-                    <div
-                        className="relative h-[400px] bg-cover bg-center rounded-lg overflow-hidden"
-                        style={{
-                            backgroundImage: "url('/src/assets/Heroarea/bangladesh-flag.png')",
-                        }}
-                    >
-                        <img
-                            src="/src/assets/Heroarea/man-wearing-t-shirt-gesturing 1.png"
-                            alt="Man posing"
-                            className="absolute bottom-0 z-50 h-[400px] left-0 w-1/2"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+          {/* Right Foreground Image (Bangladesh Man) */}
+          <div className="relative w-1/2 flex justify-center">
+            <img
+              src="/src/assets/Heroarea/man-wearing-t-shirt-gesturing 1.png"
+              alt="Young man representing Bangladesh"
+              className="w-[300px] md:w-[350px] lg:w-[400px] object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
-export default Heroarea;
+export default HeroArea;
