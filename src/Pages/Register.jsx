@@ -67,10 +67,10 @@ const Register = () => {
   };
   return (
     // <AppLayout>
-    <div className="flex min-h-screen items-center justify-center ">
-      <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2">
+    <div className="flex min-h-screen items-center justify-center py-6">
+      <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 py-12">
         {/* Left Section */}
-        <div className="p-8 md:p-12">
+        <div className="p-8 py-12 md:p-12">
           <Link to={'/'} className="mb-6">
             <img
               src="/src/assets/navbar/Clip path group.png" // Replace with your logo URL
@@ -83,7 +83,7 @@ const Register = () => {
           </h2>
           {/* <div className="mt-6 space-y-6"> */}
           {/* First and Last Name */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1  gap-4 sm:grid-cols-2">
             <div>
               <label
                 htmlFor="firstName"

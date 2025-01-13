@@ -6,7 +6,11 @@ export default {
     './node_modules/preline/preline.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Inter: ['Inter', 'serif'],
+      },
+    },
   },
   plugins: [
     require('preline/plugin'),

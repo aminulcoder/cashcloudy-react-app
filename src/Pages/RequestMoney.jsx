@@ -36,10 +36,10 @@ const RequestMoney = () => {
 >
     {/* <Head title="Dashboard" /> */}
     <div className="">
-        <div className="sm:px-6 ">
+        <div className="px-0 sm:px-6 ">
             <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div className="w-1/2 mx-auto  rounded-2xl pb-2 bg-white">
-                    <div className=" container  horizontal mt-5">
+                <div className="sm:w-1/2 mx-auto  rounded-2xl pb-2 bg-white">
+                    <div className=" w-full  horizontal mt-5">
 
                         <Stepper
                             steps={steps}
@@ -60,11 +60,11 @@ const RequestMoney = () => {
                             {displayStep(currentStep)}
                         </StepperContext.Provider>
                     </div>
-                    {/* <StapperControl
+                    <StapperControl
                         handleClick={handleClick}
                         steps={steps}
                         currentStep={currentStep}
-                    /> */}
+                    />
                     <Review
                         handleClick={handleClick}
                         steps={steps}

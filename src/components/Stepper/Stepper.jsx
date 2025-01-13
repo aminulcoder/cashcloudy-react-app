@@ -75,8 +75,8 @@ const Stepper = ({ steps, currentStep }) => {
       }
       >
         <div className=" relative flex flex-col  items-center text-[#6941C6]">
-          <div className={`rounded-full  transition duration-500 ease-in-out  border-2  border-gray-300 h-10 w-10 
-           items-center justify-center p-1 ${step.selected
+          <div className={`rounded-full  transition duration-500 ease-in-out  border-2  border-gray-300 h-8 sm:h-10 w-8 sm:w-10 
+           items-center justify-center sm:p-1 ${step.selected
               ? "bg-[#6941C6] text-white font-bold border  border-[#6941C6]" : ""
             }`}
           >
@@ -84,18 +84,18 @@ const Stepper = ({ steps, currentStep }) => {
 
             {
               step.completed ? (
-                <span className='text-white font-bold text-xl'>&#10003;</span>
+                <span className='text-white font-bold text-base items-center sm:text-xl'>&#10003;</span>
               ) : (
                 index + 1
               )}
           </div>
-          <div className={`absolute top-0  text-center mt-16 w-32  text-lg  font-normal   ${step.highlighted ? "text-gray-900" : "text-gray-400"} `}>
+          <div className={`absolute top-0  text-center mt-12 sm:mt-16 w-56   sm:w-32  text-xs sm:text-lg   font-normal   ${step.highlighted ? "text-gray-900" : "text-gray-400"} `}>
             {/* Display discription */}
 
             {step.description}
           </div>
         </div>
-        <div className={`flex-auto  border-t-8  transition  duration-500  ease-in-out ${step.completed ? "border-[#6941C6]" : "border-gray-300"
+        <div className={`flex-auto border-t-4  sm:border-t-8  transition  duration-500  ease-in-out ${step.completed ? "border-[#6941C6]" : "border-gray-300"
           }`}>
           {/* Display line */}
         </div>

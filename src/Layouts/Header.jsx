@@ -1,29 +1,16 @@
 import React from "react";
 import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
   Menu,
   MenuButton,
   MenuItem,
   MenuItems,
-  TransitionChild,
 } from "@headlessui/react";
 import {
   Bars3Icon,
   BellIcon,
-  CalendarIcon,
-  ChartPieIcon,
-  Cog6ToothIcon,
-  DocumentDuplicateIcon,
   EnvelopeIcon,
-  FolderIcon,
-  HomeIcon,
   PowerIcon,
   UserCircleIcon,
-  UserIcon,
-  UsersIcon,
-  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {
   ChevronDownIcon,
@@ -143,6 +130,7 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
                 >
                   <UserCircleIcon className="w-5" />
                   {/* {auth.currentUser.firstname} */}
+                  Admin
                 </Link>
               </MenuItem>
               <MenuItem>
@@ -153,17 +141,18 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
                   className="flex w-full items-center gap-x-3.5 py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                 >
                   <EnvelopeIcon className="h-5" />
-                  {auth.currentUser.email}
+                  admin@gmail.com
                 </Link>
               </MenuItem>
-              <MenuItem>
-                {/* <Link href={route('logout')} method="post" as="button"
-                                    className="flex w-full items-center gap-x-3.5 py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                                    <PowerIcon className="w-5" />
-                                    Logout
-                                </Link> */}
 
-                <button onClick={handleLogOut}>Logout</button>
+              <MenuItem>
+                <button
+                  onClick={handleLogOut}
+                  className="flex w-full items-center gap-x-3.5 py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                >
+                  <PowerIcon className="w-5" />
+                  Logout
+                </button>
               </MenuItem>
             </MenuItems>
           </Menu>

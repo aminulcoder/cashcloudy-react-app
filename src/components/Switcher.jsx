@@ -19,7 +19,7 @@ export default function Switcher() {
 				style={{ display: "inline" }}
 				checked={darkSide}
 				onChange={toggleDarkMode}
-				size={20}
+				size={30}
                 sunColor={'grey'}
                 moonColor={'grey'}
 			/>

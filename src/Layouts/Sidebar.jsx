@@ -40,7 +40,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -80,34 +80,75 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             </TransitionChild>
             {/* Sidebar component, swap this element with another sidebar if you like */}
             <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
-              <div className="flex h-16 shrink-0 items-center">
-                <img
-                  alt="Your Company"
-                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
-                />
-              </div>
+            <Link
+            to="/admin/dashboard"
+            className="flex h-16 shrink-0 items-center"
+          >
+            <img
+              alt="Your Company"
+              src="/src/components/Dashboard/Sidebar/Vector.png"
+              className="h-8 w-auto"
+            />
+            <span className="px-2 font-extrabold text-2xl">Cashcloudy</span>
+          </Link>
               <nav className="flex flex-1 flex-col">
                 <ul role="list" className="flex flex-1 flex-col gap-y-7">
                   <li>
                     <ul role="list" className="-mx-2 space-y-1">
-                      <li>
-                        <a
-                          href="#"
-                          className={classNames(
-                            "text-gray-800 dark:text-gray-400 hover:bg-gray-50 hover:text-indigo-600",
-                            "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6"
-                          )}
+                      <li className=" space-y-1">
+                        <NavLink
+                          to="/admin/dashboard"
+                          className={({ isActive }) =>
+                            classNames(
+                              isActive
+                                ? "bg-[#7F56D9] text-white"
+                                : "text-gray-800 dark:text-gray-400 hover:bg-[#7F56D9] hover:text-white",
+                              "group flex gap-x-3 rounded-md p-2 lg:text-lg font-semibold leading-6"
+                            )
+                          }
                         >
-                          <HomeModernIcon
+                          <ChartBarSquareIcon
                             aria-hidden="true"
-                            className={classNames(
-                              "text-gray-400 group-hover:text-indigo-600",
-                              "h-6 w-6 shrink-0"
-                            )}
+                            className="h-6 w-6 shrink-0 group-hover:text-white"
                           />
                           Dashboard
-                        </a>
+                        </NavLink>
+
+                        <NavLink
+                          to="/admin/transction"
+                          className={({ isActive }) =>
+                            classNames(
+                              isActive
+                                ? "bg-[#7F56D9] text-white"
+                                : "text-gray-800 hover:bg-[#7F56D9] hover:text-white",
+                              "group flex gap-x-3 rounded-md p-2 lg:text-lg font-semibold leading-6"
+                            )
+                          }
+                        >
+                          <ArrowsRightLeftIcon
+                            aria-hidden="true"
+                            className="h-6 w-6 shrink-0 text-inherit"
+                          />
+                          Transaction
+                        </NavLink>
+
+                        <NavLink
+                          to="/admin/earn-20$"
+                          className={({ isActive }) =>
+                            classNames(
+                              isActive
+                                ? "bg-[#7F56D9] text-white"
+                                : "text-gray-800 hover:bg-[#7F56D9] hover:text-white",
+                              "group flex gap-x-3 rounded-md p-2 lg:text-lg font-semibold leading-6"
+                            )
+                          }
+                        >
+                          <GiftIcon
+                            aria-hidden="true"
+                            className="h-8 w-8 shrink-0 group-hover:text-white"
+                          />
+                          Earn 20$
+                        </NavLink>
                       </li>
                     </ul>
                   </li>
@@ -149,7 +190,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             <ul role="list" className="flex flex-1 flex-col gap-y-7">
               <li>
                 <ul role="list" className="-mx-2 space-y-1">
-                  <li>
+                  {/* <li>
                     <Link
                       to="/admin/dashboard"
                       className={classNames(
@@ -187,19 +228,75 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                     <Link
                       to="/admin/earn-20$"
                       className={classNames(
-                        "text-gray-800  hover:bg-[#7F56D9] hover:text-white",
+                        "text-gray-800  hover:bg-[#7F56D9] active:bg-[#7F56D9] hover:text-white",
                         "group flex gap-x-3 rounded-md p-2 lg:text-lg font-semibold leading-6"
                       )}
                     >
                       <GiftIcon
                         aria-hidden="true"
                         className={classNames(
-                          " hover:text-white",
+                          " hover:text-white active:bg-[#7F56D9]",
                           "h-8 w-8 shrink-0"
                         )}
                       />
                       Earn 20$
                     </Link>
+                  </li> */}
+
+                  <li className=" space-y-1">
+                    <NavLink
+                      to="/admin/dashboard"
+                      className={({ isActive }) =>
+                        classNames(
+                          isActive
+                            ? "bg-[#7F56D9] text-white"
+                            : "text-gray-800 dark:text-gray-400 hover:bg-[#7F56D9] hover:text-white",
+                          "group flex gap-x-3 rounded-md p-2 lg:text-lg font-semibold leading-6"
+                        )
+                      }
+                    >
+                      <ChartBarSquareIcon
+                        aria-hidden="true"
+                        className="h-6 w-6 shrink-0 group-hover:text-white"
+                      />
+                      Dashboard
+                    </NavLink>
+
+                    <NavLink
+                      to="/admin/transction"
+                      className={({ isActive }) =>
+                        classNames(
+                          isActive
+                            ? "bg-[#7F56D9] text-white"
+                            : "text-gray-800 hover:bg-[#7F56D9] hover:text-white",
+                          "group flex gap-x-3 rounded-md p-2 lg:text-lg font-semibold leading-6"
+                        )
+                      }
+                    >
+                      <ArrowsRightLeftIcon
+                        aria-hidden="true"
+                        className="h-6 w-6 shrink-0 text-inherit"
+                      />
+                      Transaction
+                    </NavLink>
+
+                    <NavLink
+                      to="/admin/earn-20$"
+                      className={({ isActive }) =>
+                        classNames(
+                          isActive
+                            ? "bg-[#7F56D9] text-white"
+                            : "text-gray-800 hover:bg-[#7F56D9] hover:text-white",
+                          "group flex gap-x-3 rounded-md p-2 lg:text-lg font-semibold leading-6"
+                        )
+                      }
+                    >
+                      <GiftIcon
+                        aria-hidden="true"
+                        className="h-8 w-8 shrink-0 group-hover:text-white"
+                      />
+                      Earn 20$
+                    </NavLink>
                   </li>
                 </ul>
               </li>

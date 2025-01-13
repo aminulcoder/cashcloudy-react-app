@@ -9,10 +9,10 @@ const Mission = () => {
 
         {/* Left Section */}
         <div className="lg:col-span-6 space-y-6 text-center lg:text-start">
-          <h2 className="text-5xl md:text-5xl lg:text-4xl xl:text-6xl 2xl:text-6xl font-bold">
+          <h2 className="text-5xl md:text-5xl text-[#101828] lg:text-4xl xl:text-6xl 2xl:text-6xl font-extrabold font-Inter">
             Why choose Cashcloudy?
           </h2>
-          <p className="text-sm md:text-xl  lg:text-base xl:text-lg 2xl:text-sm  font-normal xl:py-5 2xl:py-4 2xl:pr-48">
+          <p className="text-sm md:text-xl text-[#101828]  lg:text-base xl:text-lg 2xl:text-sm  font-normal font-Inter xl:py-5 2xl:py-4 2xl:pr-48">
             In Bangladesh, the majority of freelancers cannot receive money through proper channels from the USA. They have to rely on unknown sources. Therefore, they don’t get their money on time even after paying fair compensation. Sometimes they lose all their money. That is why we are creating Cashcloudy to solve all these problems.
           </p>
           <Link to={'register'} className="bg-[#8C4DC3] text-white inline-flex items-center border border-md rounded-md px-3 py-2 hover:bg-[#7A3AB0] transition">

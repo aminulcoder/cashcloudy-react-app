@@ -4,7 +4,7 @@ import React from 'react'
 const Recipient = () => {
   return (
     <div>
-      <h2 className='text-center text-gray-950 font-semibold text-3xl py-6 '>Enter your new bank details</h2>
+      <h2 className='text-center text-gray-950 font-semibold text-xl sm:text-3xl py-6 '>Enter your new bank details</h2>
 
       <div className="sm:col-span-3 py-1">
         <label htmlFor="country" className="text-start block text-sm/6 font-medium text-gray-900">

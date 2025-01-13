@@ -45,7 +45,7 @@ const WidthdrawMoney = () => {
             <div className="">
                 <div className="sm:px-6 ">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div className="w-1/2 mx-auto  rounded-2xl pb-2 bg-white">
+                        <div className=" sm:w-1/2 mx-auto  rounded-2xl pb-2 bg-white">
                             <div className=" container  horizontal mt-5">
 
                                 <Stepper
