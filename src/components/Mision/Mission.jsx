@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Mission = () => {
   return (
-    <div className="py-24">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 px-6 md:px-12 lg:px-20 xl:gap-20 xl:px-24 2xl:px-20 ">
+    <div className="md:py-[150px] py-12 ">
+      <div className="grid grid-cols-1  lg:grid-cols-12 gap-6 lg:gap-12 px-6 md:px-12 lg:px-20 xl:gap-20 xl:px-32  ">
 
         {/* Left Section */}
         <div className="lg:col-span-6 space-y-6 text-center lg:text-start">
@@ -26,7 +26,7 @@ const Mission = () => {
           <div>
             <img 
               src="/src/assets/Feature/Video.png" 
-              className="w-full md:max-w-2xl lg:h-80 xl:h-96 2xl:h-[400px] max-w-lg h-auto rounded-lg shadow-lg" 
+              className="w-full md:max-w-3xl lg:h-80 xl:h-96 2xl:h-[400px] max-w-xl h-auto rounded-lg shadow-lg" 
               alt="Video Representation" 
             />
           </div>

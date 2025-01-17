@@ -1,5 +1,6 @@
 import { ArrowDownIcon, ChartBarIcon } from "@heroicons/react/20/solid";
 import AuthenticatedLayout from "../Layouts/AuthenticatedLayout";
+import { useState } from "react";
 import {
   ArrowRightIcon,
   BuildingLibraryIcon,
@@ -14,7 +15,13 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { Button } from "@headlessui/react";
+import { IoClose } from "react-icons/io5";
+
+import "../App.css";
+import Tooltip from "../components/Tooltip/Tooltip";
 export default function Dashboard() {
+  const [showModal, setshowModal] = useState(false);
+
   return (
     <AuthenticatedLayout
       header={
@@ -30,21 +37,24 @@ export default function Dashboard() {
           <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between px-4 sm:px-6 py-3 space-y-3 md:space-y-0">
               {/* Total Balance */}
-              <div className="flex-1">
+              <div className="flex-1 py-1">
                 <p className="text-start text-xs sm:text-sm md:text-base text-gray-600">
                   Total balance
                 </p>
-                <div className="flex flex-col sm:flex-row sm:items-center items-start space-y-2 sm:space-y-0 sm:space-x-4 py-2">
+                <div className="flex flex-col sm:flex-row sm:items-center items-start space-y-2 sm:space-y-0 sm:space-x-4 py-3">
                   <strong className="text-2xl sm:text-3xl md:text-4xl">
                     $3,384.25
                   </strong>
-                  <Link to="/admin/add-money">
-                    <Button
-                      type="button"
-                      className="flex items-center rounded-full bg-[#6941C6] p-1 sm:p-2 justify-center font-bold"
-                    >
-                      <PlusIcon className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-                    </Button>
+
+                  <Link to="/admin/add-money" className="container my-6">
+                    <Tooltip infoText="Add Money" className="z-50">
+                      <Button
+                        type="button"
+                        className="flex items-center rounded-full btn bg-[#6941C6] p-1 sm:p-2 justify-center font-bold"
+                      >
+                        <PlusIcon className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+                      </Button>
+                    </Tooltip>
                   </Link>
                 </div>
 
@@ -105,6 +115,119 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+
+      <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg my-3">
+        <div className="flex justify-between px-2 sm:px-6 py-3 sm:py-4 bg-[#6941C6]">
+          {/* Left Section */}
+          <div className="flex space-x-2 sm:space-x-3">
+            <img
+              src="/src/assets/paper dashboard/arrow box.svg"
+              className="h-8 w-8 sm:h-12 sm:w-12 bg-[#7F56D9] rounded-full p-2 sm:p-3"
+              alt="Avatar"
+            />
+            <div className="flex flex-col justify-center">
+              <h4 className="font-Inter text-sm sm:text-xl font-medium text-white leading-tight">
+                Phoenix Baker requested 100 USD
+              </h4>
+              <p className="text-start text-xs sm:text-sm text-white font-Inter">
+                Pay or decline their request
+              </p>
+            </div>
+          </div>
+
+          {/* Right Section */}
+          <div className="flex items-center">
+            <button
+              onClick={() => setshowModal(true)}
+              className="text-white text-xs sm:text-base font-Inter font-semibold bg-[#7F56D9] px-1 sm:px-4 py-2 rounded-lg"
+            >
+              View Request
+            </button>
+          </div>
+        </div>
+
+        {showModal && (
+          <div className="bg-gray-500/75 fixed inset-0  flex justify-center items-center z-50">
+            <div className="bg-white py-4 px-[22px] sm:p-6  sm:max-w-md rounded-lg shadow-lg relative">
+              <div className="flex flex-col gap-3 sm:gap-4 w-[300px]">
+                <h2 className="text-xl sm:text-2xl font-semibold">
+                  Request Details
+                </h2>
+
+                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                  <div>
+                    <label
+                      htmlFor="firstName"
+                      className="text-start block text-sm font-medium text-gray-600"
+                    >
+                      From
+                    </label>
+                    <input
+                      type="text"
+                      name="firstname"
+                      id="firstName"
+                      placeholder="Phoenix Baker"
+                      onChange={(e) => setFirstname(e.target.value)}
+                      className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="lastName"
+                      className="text-start block text-sm font-medium text-gray-600"
+                    >
+                      Amount
+                    </label>
+                    <input
+                      type="text"
+                      name="lastname"
+                      id="lastName"
+                      placeholder="100 USD"
+                      onChange={(e) => setLastname(e.target.value)}
+                      className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="about"
+                    className="text-start block text-sm font-medium text-gray-900 mb-1 sm:mb-1"
+                  >
+                    Description
+                  </label>
+                  <textarea
+                    id="about"
+                    name="about"
+                    rows={4}
+                    placeholder="Here will be a short description."
+                    className="block w-full rounded-md bg-white sm:px-3 py-2 text-sm text-gray-900 border border-gray-300 focus:outline-none placeholder:px-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  />
+                </div>
+
+                <div className="flex justify-between space-x-4">
+                  <button
+                    onClick={() => setshowModal(false)}
+                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm sm:text-base"
+                  >
+                    Decline
+                  </button>
+                  <button
+                    onClick={() => setshowModal(false)}
+                    className="bg-[#6941C6] font-semibold text-white px-4 py-2 rounded hover:bg-gray-400 text-sm sm:text-base"
+                  >
+                    Pay now
+                  </button>
+                </div>
+              </div>
+              <div className="absolute top-2 right-2 cursor-pointer">
+                <IoClose onClick={() => setshowModal(false)} size={24} />
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
       <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
         <div className="flex justify-between px-4 sm:px-6 py-4">
           <p className="text-lg sm:text-2xl font-semibold">Recent Contacts</p>

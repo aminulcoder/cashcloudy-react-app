@@ -17,37 +17,47 @@ const Transction = () => {
     >
       <div className="py-3">
         <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-          <div className="flex justify-between py-3 space-x-2 px-5">
-            {/* Search bar */}
-            <div className="flex items-center justify-between w-full max-w-[350px] px-3 border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-indigo-500">
-              <MagnifyingGlassIcon className="w-5 h-5 text-gray-400" />
-              <input
-                type="text"
-                name="search"
-                className="py-3 px-2 block w-full bg-transparent text-gray-700 text-sm placeholder-gray-400 focus:outline-none focus:ring-0"
-                placeholder="Search"
-              />
-            </div>
+        <div className="flex justify-between py-3 space-x-2 px-5">
+  {/* Search bar */}
+  <div className="flex items-center w-full max-w-[350px] px-3 border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-indigo-500">
+    <MagnifyingGlassIcon
+      className="w-5 h-5 text-gray-400"
+      aria-hidden="true"
+    />
+   <input
+  type="text"
+  name="search"
+  className="py-3 px-2 block w-full bg-transparent text-gray-700 text-sm placeholder-gray-400 border-none focus:outline-none focus:ring-0"
+  placeholder="Search"
+  aria-label="Search"
+/>
 
-            {/* Filters button */}
-            <div className="flex items-center border border-gray-300 rounded-lg shadow-sm px-4 bg-white hover:shadow-md transition-shadow space-x-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="h-6 w-6 text-gray-600"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
-                />
-              </svg>
-              <p className="text-base font-medium text-gray-700">Filters</p>
-            </div>
-          </div>
+  </div>
+
+  {/* Filters button */}
+  <button
+    type="button"
+    className="flex items-center border border-gray-300 rounded-lg shadow-sm px-4 bg-white hover:shadow-md transition-shadow space-x-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+    aria-label="Open Filters"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="h-6 w-6 text-gray-600"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+      />
+    </svg>
+    <p className="text-base font-medium text-gray-700">Filters</p>
+  </button>
+</div>
+
 
           {/* Transaction entries */}
           <div className="py-3">

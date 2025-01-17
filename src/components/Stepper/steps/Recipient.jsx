@@ -7,12 +7,17 @@ const Recipient = () => {
   return (
     <div>
 
-      <h2 className='text-center text-gray-950 font-semibold text-2xl xl:text-2xl '>Send your money</h2>
+      <h2 className='text-center text-gray-950 font-semibold text-2xl xl:text-2xl '></h2>
       <div className="flex items-center justify-center  py-3">
         <div className="flex items-center  flex-1 max-w-6xl px-3 border  rounded-md">
           <MagnifyingGlassIcon className="w-5 h-5 text-gray-400" />
           <input
-            type="text" name="search" className="py-3 block  px-3 dark:bg-transparent   dark:border-gray-700 rounded-lg text-sm border-none focus:ring-0 text-white placeholder:text-gray-500  placeholder:font-semibold" placeholder="Name, @username, email, phone" />
+  type="text"
+  name="search"
+  className="py-3 px-2 block w-full bg-transparent text-gray-700 text-sm placeholder-gray-400 border-none focus:outline-none focus:ring-0"
+  placeholder=" Name ,@username ,phone "
+  aria-label="Search"
+/>
         </div>
       </div>
 

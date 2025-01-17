@@ -86,10 +86,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           >
             <img
               alt="Your Company"
-              src="/src/components/Dashboard/Sidebar/Vector.png"
+              src="/src/assets/paper dashboard/Dashboard Logo.svg"
               className="h-8 w-auto"
             />
-            <span className="px-2 font-extrabold text-2xl">Cashcloudy</span>
+            {/* <span className="px-2 font-extrabold text-2xl">Cashcloudy</span> */}
           </Link>
               <nav className="flex flex-1 flex-col">
                 <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -181,10 +181,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           >
             <img
               alt="Your Company"
-              src="/src/components/Dashboard/Sidebar/Vector.png"
+              src="/src/assets/paper dashboard/Dashboard Logo.svg"
               className="h-8 w-auto"
             />
-            <span className="px-2 font-extrabold text-2xl">Cashcloudy</span>
+            {/* <span className="px-2 font-extrabold text-2xl">Cashcloudy</span> */}
           </Link>
           <nav className="flex flex-1 flex-col">
             <ul role="list" className="flex flex-1 flex-col gap-y-7">

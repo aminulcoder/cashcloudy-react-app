@@ -10,16 +10,9 @@ const Navbar = () => {
           <div className="flex items-center space-x-3">
             <Link to={'/'}>
               <img
-                src="/src/assets/navbar/Clip path group.png"
+                src="/src/assets/paper dashboard/homepage Logo .svg"
                 alt="Logo Part 1"
-                className="w-12 sm:w-16"
-              />
-            </Link>
-            <Link to={"/"}>
-              <img
-                src="/src/assets/navbar/Cashcloudy.png"
-                alt="Logo Part 2"
-                className="w-24 sm:w-32 md:w-40 "
+                className="w-44 sm:w-64"
               />
             </Link>
           </div>

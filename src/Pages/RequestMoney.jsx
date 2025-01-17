@@ -2,9 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import AuthenticatedLayout from '../Layouts/AuthenticatedLayout';
 import { StepperContext } from '../contexts/StepperContext.jsx';
-import Stepper from '../components/Stepper/Stepper';
-import StapperControl from '../components/Stepper/StapperControl.jsx';
-import Review from '../components/Stepper/steps/Review.jsx';
+import Stepper from '../components/Request/Stepper';
+import StapperControl from '../components/Request/StapperControl.jsx';
 import Recipient from '../components/Request/steps/Recipient.jsx'
 import Request from '../components/Request/steps/Request.jsx'
 
@@ -61,11 +60,6 @@ const RequestMoney = () => {
                         </StepperContext.Provider>
                     </div>
                     <StapperControl
-                        handleClick={handleClick}
-                        steps={steps}
-                        currentStep={currentStep}
-                    />
-                    <Review
                         handleClick={handleClick}
                         steps={steps}
                         currentStep={currentStep}
